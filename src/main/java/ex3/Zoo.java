@@ -3,48 +3,64 @@ package ex3;
 public class Zoo {
 
 	private String nom;
-	private SavaneAfricaine savaneAfricaine;
+	private Aquarium zoneAquarium;
+	private FermeReptile zoneFermeReptile;
+	private SavaneAfricaine zoneSavaneAfricaine;
 	private ZoneCarnivore zoneCarnivore;
-	private FermeReptile fermeReptile;
-	private Aquarium aquarium;
-	
-	public Zoo(String nom){
+
+	public Zoo(String nom) {
+		super();
 		this.nom = nom;
 	}
-	
-	public void addAnimal(String nomAnimal, String typeAnimal, String comportement){
-		if (typeAnimal.equals("MAMMIFERE") && comportement.equals("CARNIVORE")){
-			zoneCarnivore.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-		else if (typeAnimal.equals("MAMMIFERE") && comportement.equals("HERBIVORE")){
-			savaneAfricaine.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-		else if (typeAnimal.equals("REPTILE")){
-			fermeReptile.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-		else if (typeAnimal.equals("POISSON")){
-			aquarium.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-	}
-	
-	public void afficherListeAnimaux(){
-		savaneAfricaine.afficherListeAnimaux();
-		zoneCarnivore.afficherListeAnimaux();
-		fermeReptile.afficherListeAnimaux();
-		aquarium.afficherListeAnimaux();
-	}
 
-	/** Getter for nom
+	/**
+	 * Getter for nom
+	 * 
 	 * @return the nom
 	 */
 	public String getNom() {
 		return nom;
 	}
 
-	/** Setter
+	/**
+	 * Setter
+	 * 
 	 * @param nom the nom to set
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+
+	public Aquarium getZoneAquarium() {
+		return zoneAquarium;
+	}
+
+	public void setZoneAquarium(Aquarium zoneAquarium) {
+		this.zoneAquarium = zoneAquarium;
+	}
+
+	public FermeReptile getZoneFermeReptile() {
+		return zoneFermeReptile;
+	}
+
+	public void setZoneFermeReptile(FermeReptile zoneFermeReptile) {
+		this.zoneFermeReptile = zoneFermeReptile;
+	}
+
+	public SavaneAfricaine getZoneSavaneAfricaine() {
+		return zoneSavaneAfricaine;
+	}
+
+	public void setZoneSavaneAfricaine(SavaneAfricaine zoneSavaneAfricaine) {
+		this.zoneSavaneAfricaine = zoneSavaneAfricaine;
+	}
+
+	public ZoneCarnivore getZoneCarnivore() {
+		return zoneCarnivore;
+	}
+
+	public void setZoneCarnivore(ZoneCarnivore zoneCarnivore) {
+		this.zoneCarnivore = zoneCarnivore;
+	}
+
 }
